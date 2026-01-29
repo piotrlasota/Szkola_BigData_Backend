@@ -63,6 +63,6 @@ def infer(req: ConcretePredictionRequest):
     return ConcretePredictionResponse(
         request_id=data["request_id"],
         model=data["model"],
-        prediction=float(data["prediction"]),
+        prediction=str(data["prediction"]),
         status=data.get("status", "OK")
     )

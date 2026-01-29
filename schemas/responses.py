@@ -3,5 +3,5 @@ from pydantic import BaseModel
 class ConcretePredictionResponse(BaseModel):
     request_id: str
     model: str
-    prediction: float
+    prediction: str
     status: str
