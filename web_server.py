@@ -34,7 +34,7 @@ app.add_middleware(
     
 @app.post("/ConcretePrediction", response_model=ConcretePredictionResponse)
 def infer(req: ConcretePredictionRequest):
-    if req.model != "concrete_strength_v1":
+    if req.model not in ["concrete_strength_rf_regression","concrete_strength_rf_classification"]:
         raise HTTPException(
             status_code=400,
             detail="Unsupported model"
